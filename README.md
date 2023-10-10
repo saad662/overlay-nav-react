@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Overlay Nav React</title>
-  <style>
-    /* Add your CSS styles here */
-    /* ... */
-  </style>
-</head>
-
 <body>
   <h1>Overlay Nav React</h1>
 
