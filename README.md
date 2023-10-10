@@ -12,10 +12,12 @@
 
 <p>You can install <code>overlay-nav-react</code> using npm or yarn:</p>
 
-<pre><code>npm install overlay-nav-react
-# or
-yarn add overlay-nav-react
-</code></pre>
+<pre><code>npm install overlay-nav-react</code></pre>
+<pre><code># or</code></pre>
+<pre><code>yarn add overlay-nav-react</code></pre>
+
+<!-- Add the npm link here -->
+<p>For more details, visit the package on npm: <a href="https://www.npmjs.com/package/overlay-nav-react">overlay-nav-react on npm</a></p>
 
 <h2>Usage</h2>
 
