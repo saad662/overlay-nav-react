@@ -4,6 +4,8 @@
 
 <h1>overlay-nav-react</h1>
 
+<img src="https://i.pinimg.com/originals/dd/7a/5c/dd7a5c648c7ce25309a5882ed611294a.gif" alt="Overlay Nav GIF">
+
 <p><code>overlay-nav-react</code> is a lightweight and customizable React component for creating overlay navigation menus with a hamburger icon that opens and closes the menu. It is designed to provide a smooth and responsive navigation experience for your web application. You can easily integrate it into your React project and customize it to fit your design and branding needs.</p>
 
 <h2>Installation</h2>
