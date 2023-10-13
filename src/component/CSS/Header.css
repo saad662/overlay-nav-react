@@ -1,211 +1,242 @@
-/* Header container */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: transparent;
-    color: #fff;
-  }
-  
-  /* Like icon */
-  .like-icon {
-    font-size: 20px;
-    margin-right: 10px;
-  }
-  
-  /* Hamburger icon */
-  .hamburger-icon {
-    font-size: 32px;
+/* Hamburger icon */
+.hamburger-icon {
+  font-size: 32px;
+  cursor: pointer;
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 1000;
+  color: #000;
+}
+
+.custom-overlay {
+  width: 100%;
+  height: 0;
+  top: 0;
+  background-color: rgb(255, 245, 245);
+  transition: height 0.5s, top 0.5s;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.logo {
+  margin: 10px;
+}
+
+.logo img {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
+}
+
+.nav-link {
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Overlay Navbar */
+.overlay-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.header.active .overlay-navbar {
+  height: 100%;
+}
+
+/* Center the content inside the navbar */
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: -25px;
+  margin-right: 80px;
+}
+
+.vertical-icons {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.vertical-icons .black-icon {
+  margin: 10px 0;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 25px;
+  margin-top: -300px;
+}
+
+.logo-icons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons .icon-wrapper {
+  margin: 10px 0;
+}
+
+.icons .black-icon {
+  margin: 10px 0;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.icon-wrapper .black-icon {
+  margin-left: 10px;
+  font-size: 24px;
+  /* Adjust the icon size as needed */
+  color: #000;
+  /* Adjust the icon color as needed */
+  transition: color 0.2s, cursor 0.2s;
+  /* Add cursor transition for hover effect */
+
+  /* Add a hover effect to change the color and cursor */
+  &:hover {
+    color: #555;
+    /* Change the color on hover */
     cursor: pointer;
-    position: fixed; /* Set to fixed */
-    top: 22px; /* Adjust as needed to position it vertically */
-    left: 22px; /* Adjust as needed to position it horizontally */
-    z-index: 1000; /* Ensure it's above other content */
-    color: #000; /* Set the color to black */
+    /* Change the cursor to a pointer hand on hover */
   }
-  
-  .overlay-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0; /* Start with 0% height */
-    background-color: rgb(255, 245, 245);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: height 0.5s ease, opacity 0.5s ease; /* Add transitions for height and opacity */
-  }
-  
-  .header.active .overlay-navbar {
-    animation: slideDown 0.5s ease forwards; /* Use the slideDown animation */
-  }
-  
-  .header:not(.active) .overlay-navbar {
-    animation: slideUp 0.5s ease forwards; /* Use the slideUp animation */
-  }
-  
+}
+
+.header.active .icons {
+  transform: translateX(0);
+}
+
+.black-icon {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #000;
+}
+
+/* Transition when active (X icon) */
+.line.active.line1 {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.line.active.line2 {
+  opacity: 0;
+}
+
+.line.active.line3 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+
+  /* Center the content in the mobile view */
   .overlay-content {
-    display: flex;
-    justify-content: space-between; /* Distribute items evenly horizontally */
-    align-items: center; /* Center items vertically */
+    text-align: center;
+    margin: -40px 0;
   }
-  /* Close icon */
-  .close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .logo {
-    margin-right: 50px; /* Reset margin to center the logo */
-    text-align: center; /* Center logo horizontally */
-    transform: translateX(-100%); /* Logo starts off-screen to the left */
-    transition: transform 0.5s ease; /* Transition for the transform property */
-  }
-  
-  
+
+  /* Adjust the logo image size and positioning */
   .logo img {
-    max-width: 200px;
-    /* Adjust the width as needed */
-    margin-right: 20px; /* Add space to the right of the logo */
+    max-width: 250px;
+    /* Set the maximum width of the logo image */
+    height: auto;
+    /* Maintain the aspect ratio */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 3%;
   }
-  
-  /* Navigation Links */
+
+  .logo {
+    margin: 10px 0;
+    /* Reduce the margin between logo and links */
+  }
+
+  /* Split the links into two columns with two links in each */
   .navbar-nav {
-    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    /* Add space between the columns and rows */
+    margin-left: 15px;
     padding: 0;
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Vertically center items */
-    margin-right: 20px; /* Add space to the right of the navigation links */
   }
-  
-  .navbar-nav li {
-    margin-right: 20px; /* Add space between links */
+
+  .nav-item {
+    margin: 0;
+    /* Reset margin for individual items */
   }
-  
+
+  /* Style the links */
   .nav-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .icons {
-    margin-left: 0; /* Reset margin to center the icons */
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Vertically center items */
-    transform: translateX(100%); /* Icons start off-screen to the right */
-    transition: transform 0.5s ease; /* Transition for the transform property */
-  }
-  .header.active .icons {
-    transform: translateX(-20px); /* Icons slide in from the right and shifted slightly to the left */
-  }
-  
-  .black-icon {
-    font-size: 24px;
-    margin-left: 20px;
     color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    /* Add padding to the links for better clickability */
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+    /* Add a smooth hover effect */
   }
-  
-  .icons i {
+
+  .nav-item {
+    margin-bottom: 17px;
+  }
+
+
+  /* Center the icons at the bottom */
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjust the number of columns as needed */
+    gap: 20px;
+    /* Add space between icons */
+    margin: 20px 0;
+    margin-left: 35px;
+  }
+
+  .icon-wrapper {
+    margin: 0 20px;
+  }
+
+  .icon-wrapper .black-icon {
     font-size: 24px;
-    margin-left: 20px; /* Add space to the left of the icons */
-    color: #000; /* Set the color to black */
+    color: #000;
+    transition: color 0.2s, cursor 0.2s;
   }
-  /* Transition when active (X icon) */
-  .line.active.line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+
+  .header.active .icons {
+    transform: translateY(0);
   }
-  
-  .line.active.line2 {
-    opacity: 0;
-  }
-  
-  .line.active.line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-  
-  /* Media query for mobile responsiveness */
-  @media (max-width: 768px) {
-    /* Overlay Navbar for Mobile */
-    .overlay-navbar {
-      background-color: #fff; /* Change the background color for better visibility */
-      height: 100%; /* Set to 100% height */
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    .overlay-content {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items horizontally */
-      padding-top: 50px; /* Add spacing from the top */
-    }
-    
-    .navbar-nav {
-      flex-direction: column; /* Stack navigation links vertically */
-      text-align: center; /* Center text */
-      margin: 0; /* Reset margin */
-    }
-    
-    .nav-item {
-      margin: 15px 0; /* Add spacing between links */
-    }
-    
-    .icons {
-      transform: translateX(-25px); /* Shift icons slightly to the left */
-      margin: 20px 0; /* Add spacing between icons */
-      justify-content: center; /* Center icons horizontally */
-    }
-    
-    /* Logo animation for mobile */
-    .logo {
-      margin-right: 0; /* Reset margin to center the logo */
-      text-align: center; /* Center logo horizontally */
-      transform: translateX(0%); /* Logo returns to its initial position when navbar is opened */
-      transition: transform 0.5s ease; /* Transition for the transform property */
-    }
-  
-    .logo img {
-      margin-right: 0; /* Reset margin for the logo image */
-    }
-  }
-  
-  
-  /* Animation when navbar is opened */
-  .header.active .logo {
-    transform: translateX(0%); /* Logo slides in from the left */
-  }
-  
-  @keyframes slideDown {
-    0% {
-      top: -100%; /* Start above the viewport */
-      height: 0%; /* Start with 0% height */
-    }
-    100% {
-      top: 0%; /* End at the top of the viewport */
-      height: 100%; /* Expand to 100% height */
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  
-  @keyframes slideUp {
-    0% {
-      top: 0%; /* Start at the top of the viewport */
-      height: 100%; /* Start with 100% height */
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      top: -100%; /* End above the viewport */
-      height: 0%; /* Collapse to 0% height */
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
+}
