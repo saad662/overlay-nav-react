@@ -5,7 +5,7 @@
 <h1>overlay-nav-react</h1>
 
 <div style="display: flex;">
-  <img src="https://i.pinimg.com/originals/c9/bd/90/c9bd903c5ef939382f1b989b7669f72c.png" alt="Laptop Screenshot" style="height: 50px; width: 10px;">
+  <img src="https://i.pinimg.com/originals/c9/bd/90/c9bd903c5ef939382f1b989b7669f72c.png" alt="Laptop Screenshot" style="height: 300px; width: auto">
   <!-- <img src="https://i.pinimg.com/originals/1f/f2/ac/1ff2ac0e6d0df0b1463ae5fa76616721.jpg" alt="Phone Screenshot" style="height: 50px; width: 10px;"> -->
 </div>
 
