@@ -70,7 +70,7 @@ export default App;
 
 <h2>License</h2>
 
-<p>This package is licensed under the MIT License.</p>
+<p>This package is licensed under the ISC License.</p>
 
 <h2>Issues and Contributions</h2>
 
