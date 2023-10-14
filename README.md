@@ -3,7 +3,7 @@
 <body>
 
 <h1>overlay-nav-react</h1>
-[![npm](https://img.shields.io/npm/dm/overlay-nav-react)](https://www.npmjs.com/package/overlay-nav-react)
+<img src="https://img.shields.io/npm/dm/overlay-nav-react" alt="Downloads per month">
 
 <div style="display: flex;">
   <img src="https://i.pinimg.com/originals/c9/bd/90/c9bd903c5ef939382f1b989b7669f72c.png" alt="Laptop Screenshot" style="height: 300px; width: auto">
